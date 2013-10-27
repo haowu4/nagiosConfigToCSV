@@ -1,3 +1,8 @@
+""" Transfer Nagios3 config file to csv """
+
+__author__  = "Hao Wu"
+
+
 import os.path 
 from os import listdir
 import sys
@@ -147,9 +152,9 @@ if __name__ == "__main__":
 		if input_dir == "help":
 			i = 2/0
 		output_dir = sys.argv[2]
-		generate_json(input_dir,output_dir
+		generate_json(input_dir,output_dir)
 		# generate_json("config","out")
-	except Exception,e:
+	except Exception as inst:
 		print "Help info: "
 		print "		run with the following: "
 		print "		$ python generate.py [nagios config folder] [output folder]"
